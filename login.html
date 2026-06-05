@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-     <link rel="stylesheet" href="/bootstrap-icons-1.11.2/font/bootstrap-icons.css">
-     <link class="logo" rel="icon" href="../image/Logo.png">
-     <link rel="stylesheet" href="../System/css/bootstrap.css">
-     <link rel="stylesheet" href="../Css/login.css">
- 
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="/bootstrap-icons-1.11.2/font/bootstrap-icons.css">
+  <link class="logo" rel="icon" href="../image/Logo.png">
+  <link rel="stylesheet" href="../System/css/bootstrap.css">
+  <link rel="stylesheet" href="/Css/login.css">
+
 </head>
+
 <body>
-    <div class="Container">
-        <div class="wapper-container">
-            <img class="Logo-image " src="../image/Logo.png" alt="">
+  <div class="Container">
+    <div class="wapper-container">
+      <img class="Logo-image " src="../image/Logo.png" alt="">
       <div class="Card">
-                <h2 class="title-login">Login here </h2>
+        <h2 class="title-login">Login here </h2>
         <form id="loginForm" action="../HTML/Dashbord.html" onsubmit="return validateForm()">
-          <div class="inputs-labels">       
+          <div class="inputs-labels">
             <label class="label" for="username">Student-Number:</label>
-            <input class="input" type="text" id="username" name="username" placeholder="Student-Number"  >
-             
+            <input class="input" type="text" id="username" name="username" placeholder="Student-Number">
+
             <span id="usernameError" class="error"></span>
-            
-             <label class="label" for="password">Password:</label>
-             <input class="input" type="password" id="password" name="password" placeholder="Password"  >
-            
-             <span id="passwordError" class="error"></span>
-             <input id="btn" type="submit" value="Login">
-         </div>   
+
+            <label class="label" for="password">Password:</label>
+            <input class="input" type="password" id="password" name="password" placeholder="Password">
+
+            <span id="passwordError" class="error"></span>
+            <input id="btn" type="submit" value="Login">
+          </div>
         </form>
-     </div>
-      
+      </div>
+
     </div>
-   <script src="../System/js/bootstrap.js"></script>
-     <script defer src="../Js/login.js"></script>
+    <script src="../System/js/bootstrap.js"></script>
+    <script defer src="../Js/login.js"></script>
 </body>
+
 </html>
