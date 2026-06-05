@@ -1,0 +1,331 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Arial Narrow', sans-serif;
+}
+
+body{
+    background:linear-gradient(315deg,rgba(62, 176, 207, 0.791) 0%, rgba(16, 93, 166, 0.788)) ; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+
+}
+
+/*Container*/
+   
+.Container{
+    position: relative;
+    width: 10px;
+    min-width: 1000px;
+    min-height: 1000px;
+    background-color: #FFF;
+    margin: 4px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgb(0,0,0,0.2);
+  
+}
+
+.Container-blue{
+     position: relative;
+     background:linear-gradient(315deg,rgba(62, 207, 193, 0.791) 0%, blue) ; 
+     padding: 40px;
+  
+}
+
+img{
+    margin-left: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    border: 5px solid whitesmoke;
+}
+
+/*Container-Contact*/
+
+.title-Contact{
+    margin: 10px;
+    padding: 10px;
+    font-size: 95%;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+  
+}
+
+.Contact ul li {
+    color: whitesmoke;
+    list-style: none;
+    margin: 10px;
+}
+
+/*Container-Educational-background*/
+
+.title-Education{
+    margin: 10px;
+    padding: 10px;
+    font-size: 120%;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.title{
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.Educational ul li {
+    
+    margin: 10px;
+    margin-left: 20px;
+    color: whitesmoke;
+    list-style: none;
+}
+
+/*Container-Expertise*/
+
+.title-Expertise{
+    margin: 10px;
+    padding: 10px;
+    font-size: 120%;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.Expertise ul li {
+    margin: 10px;
+    margin-left: 20px;
+    color: whitesmoke;
+    list-style: none;
+}
+
+
+/*Container-Language*/
+
+.title-Language{
+     margin: 10px;
+    padding: 10px;
+    font-size: 120%;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.Language ul li {
+    margin: 10px;
+    margin-left: 20px;
+    color: whitesmoke;
+    list-style: none;
+}
+
+
+
+
+/*Right*/
+/* information */
+
+.Container-info{
+    margin: 10px;
+    padding: 30px;
+
+}
+
+
+
+.Name{
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: #3385ff;
+}
+
+.Course{
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Details */
+.Container-Details{
+    margin: 10px;
+    padding: 5px;
+}
+
+.Container-Details h3 {
+    margin: 10px;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif
+}
+
+.Container-Details p {
+    padding: 10px;
+}
+
+
+/* Qualification */
+
+.Qualification{
+    margin: 5px;
+    padding: 5px;
+
+}
+
+.title-child{
+     
+     
+    padding: 10px;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+    color: #3385ff;
+   
+    
+}
+
+
+
+
+
+.Qualification .title{
+    margin: 10px;
+  
+    
+}
+
+
+
+.Qualification ul li{
+    list-style: none;
+    margin: 10px;
+    padding: 15px;
+}
+
+/* Reference */
+
+.title-reference{
+    margin: 15px;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+   
+    color: #3385ff;
+}
+
+.Reference-info{
+    margin: 20px; 
+    display: flex;
+    gap: 40px;
+    margin-left: 40px;
+}
+
+.Reference-info ul li {
+    list-style: none;
+    margin: 10px;
+}
+
+
+
+
+/*Responsive*/
+
+@media screen and (max-width :1000px)  {
+    .Container{
+        margin: 10px;
+        grid-template-columns: repeat(1, 1fr);
+       
+    }
+    p{
+        margin: 50px;
+        padding: 50px;
+    }
+
+    .ref-li{
+         grid-template-columns: repeat(2, 1fr);
+       
+    }
+}
+
+
+/* Responsive
+/*900px*/
+
+@media screen and (max-width: 900px) {
+ 
+    .Container-left{
+        position: relative; 
+         left: 10px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    p{
+        margin: 50px;
+        padding: 40px;
+    }
+
+      .Container-Right{
+        position: relative;
+        left: 20px;
+     
+    }
+    
+    .Qualification{
+        margin-left: 20px;
+    }
+
+    .Reference{
+        margin-left: 20px;
+    }
+} 
+
+
+/*Responsive*/
+/*700px*/
+
+
+@media screen and (max-width: 700px) {
+ 
+    .Container-left{
+        position: relative;
+        left: 10%;
+    
+    }
+
+      .Container-Right{
+        
+        position: relative;
+        left: 15%;
+    }
+    
+    .Container-Details p {
+       
+       margin-right: 130px;
+    }
+} 
+
+
+@media screen and (max-width: 500px) {
+ 
+    .Container-left{
+        position: relative;
+        left: 25%; 
+       
+    }
+
+        .Container-Right{
+        
+        position: relative;
+        left: 25%;
+    }
+    .Container-Details p {
+       
+       margin-right: 230px;
+    }
+
+    
+
+    
+    
+} 

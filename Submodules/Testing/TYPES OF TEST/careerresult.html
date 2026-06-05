@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Career Planning Result</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: whitesmoke;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Container Styles */
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Heading Styles */
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    h2 {
+      font-size: 24px;
+      color: #555;
+    }
+
+    /* Result Display Styles */
+    #careerTestResult {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    #resultDisplay {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    /* Button Styles */
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .done-button {
+      padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #0000CD;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .done-button:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Career Planning Result</h1>
+    <div id="careerTestResult">
+      <h2>Your Career Assessment Result:</h2>
+      <p id="resultDisplay"></p>
+      <div class="button-container">
+        <button class="done-button" onclick="goToDashboard()">Go Back to Menu</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function goToDashboard() {
+      // Replace 'dashboard.html' with the actual URL of your dashboard page
+      window.location.href = 'dashboardtesting.html';
+    }
+
+    // Retrieve the result from localStorage
+    const result = localStorage.getItem('careerResult');
+
+    // Display the result
+    const resultDisplay = document.getElementById('resultDisplay');
+    if (resultDisplay) {
+      resultDisplay.textContent = result || 'No result found.';
+    }
+
+    // Show the result section
+    const careerTestResult = document.getElementById('careerTestResult');
+    if (careerTestResult) {
+      careerTestResult.style.display = 'block';
+    }
+  </script>
+</body>
+</html>

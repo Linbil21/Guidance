@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Self-Esteem Scales Test</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Body styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: whitesmoke;
+    }
+
+    /* Container styles */
+    .container {
+      width: 80%;
+      margin: 20px auto;
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    /* Heading styles */
+    h1 {
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    /* Question styles */
+    .question {
+      margin-bottom: 30px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: left; /* Align text to the left */
+    }
+
+    /* Radio button label styles */
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    /* Radio button styles */
+    input[type="radio"] {
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+
+    /* Submit button styles */
+    button {
+      padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #0000CD;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+
+    /* Result section styles */
+    #result {
+      margin-top: 30px;
+    }
+
+    /* Result text styles */
+    #resultText {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* Media query for responsiveness */
+    @media screen and (max-width: 768px) {
+      .container {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Self-Esteem Scales Test</h1>
+    <form id="quizForm">
+      <div class="question">
+        <p><strong>Question 1: How do you generally feel about yourself?</strong></p>
+        <label><br>
+          <input type="radio" name="q1" value="A">
+          I struggle with low self-esteem and lack confidence
+        </label>
+        <label>
+          <input type="radio" name="q1" value="B">
+          I have high self-esteem and confidence
+        </label>
+      </div>
+
+      <div class="question">
+        <p><strong>Question 2: How do you handle setbacks or failures?</strong></p>
+        <label><br>
+          <input type="radio" name="q2" value="A">
+          I see setbacks as opportunities to learn and grow
+        </label>
+        <label>
+          <input type="radio" name="q2" value="B">
+          I tend to dwell on failures and feel discouraged
+        </label>
+      </div>
+
+      <div class="question">
+        <p><strong>Question 3: How do you typically react to compliments or positive feedback about yourself?</strong></p>
+        <label><br>
+          <input type="radio" name="q3" value="A">
+          I feel uneasy or doubtful when receiving compliments
+        </label>
+        <label>
+          <input type="radio" name="q3" value="B">
+          I accept and appreciate compliments graciously
+        </label>
+      </div>
+      
+      <div class="question">
+        <p><strong>Question 4: How do you handle criticism or negative feedback directed at you?</strong></p>
+        <label><br>
+          <input type="radio" name="q4" value="A">
+          I tend to take criticism personally and feel defensive
+        </label>
+        <label>
+          <input type="radio" name="q4" value="B">
+          I view criticism as constructive and try to learn from it
+        </label>
+      </div>
+      
+      <div class="question">
+        <p><strong>Question 5: How do you perceive your own value and worth?</strong></p>
+        <label><br>
+          <input type="radio" name="q5" value="A">
+          I have a strong sense of self-worth and value
+        </label>
+        <label>
+          <input type="radio" name="q5" value="B">
+          I struggle with feelings of inadequacy or low self-worth
+        </label>
+      </div>
+      
+
+      
+
+      <button type="button" onclick="calculateSelfEsteemResult()">Submit</button>
+    </form>
+
+    <div id="result" style="display: none;">
+      <h2>Your Self-Esteem Scales Type:</h2>
+      <p id="resultText"></p>
+    </div>
+
+    <script>
+      function calculateSelfEsteemResult() {
+        const form = document.getElementById("quizForm");
+        const questions = form.querySelectorAll(".question");
+        let totalScore = 0;
+        let numQuestions = 0;
+        let answeredQuestions = 0;
+
+        questions.forEach((question) => {
+          const selectedOption = question.querySelector('input[type="radio"]:checked');
+          if (selectedOption) {
+            const questionName = selectedOption.getAttribute('name');
+            let questionScore = 0;
+
+            if (questionName === "q1" && selectedOption.value === "B") {
+              questionScore = 1;
+            } else if (questionName === "q2" && selectedOption.value === "A") {
+              questionScore = 1;
+            } else if (questionName === "q3" && selectedOption.value === "B") {
+            questionScore = 1; 
+            } else if (questionName === "q4" && selectedOption.value === "B") {
+            questionScore = 1; 
+            } else if (questionName === "q5" && selectedOption.value === "A") {
+            questionScore = 1; 
+            }
+
+            totalScore += questionScore;
+            answeredQuestions++;
+          }
+          numQuestions++;
+        });
+
+        if (answeredQuestions === numQuestions) {
+          let result = "";
+
+          // Customize the result based on the total score
+          if (totalScore >= 5) {
+            result = "Your self-esteem indicates a positive and confident outlook on life.";
+          } else if (totalScore >= 4) {
+            result = "Your self-esteem indicates a positive and confident outlook on life.";
+          } else if (totalScore >= 3) {
+            result = "Your self-esteem shows signs of positivity, but there might be areas to improve.";
+          } else {
+            result = "Your self-esteem might need attention and improvement.";
+          }
+
+          const resultText = document.getElementById("resultText");
+          resultText.textContent = result;
+
+          const resultSection = document.getElementById("result");
+          resultSection.style.display = "block";
+
+          localStorage.setItem('selfEsteemResult', result);
+          window.location.href = 'selfesteemresult.html'; // Redirect to the result page for self-esteem test
+        } else {
+          alert("Please answer all questions.");
+        }
+      }
+    </script>
+  </div>
+</body>
+</html>

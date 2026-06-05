@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+   
+}
+
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   background-image:url("../image/background-image.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+/*Header Tag*/
+
+
+
+
+
+
+.Container{
+    position: absolute;
+    top: 20px;
+}
+
+
+.wapper-container{
+    padding: 10px;
+    margin: 10px;
+    height: 600px;
+    width: 100%;
+    border: 5px solid skyblue;
+    background-color: #2563C6;
+    border-radius: 30px;
+    display: flex;
+}
+
+
+
+/*logo-image*/
+.Logo-image{
+    border: 5px solid blue;
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+}
+
+
+
+
+
+
+/*Container*/
+.Card{   
+    margin-left: 20px;
+    border-radius: 30px;
+    width: 400px;
+    background-color: skyblue;
+}
+
+.title-login{
+    margin: 10px;
+    margin-top: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+
+.inputs-labels{
+    margin: 10px;
+    padding: 10pX;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.label{
+    font-weight: bold;
+    margin: 10px;
+}
+
+.input{
+    padding: 10px 30px;
+    margin: 10px;
+    border-radius: 30px;
+    
+}
+
+.error{ 
+    color: red;
+    font-weight: bold;
+    margin-left: 20px;
+    border-color: red;
+    
+}
+
+.success{
+    color: green;
+     border-color: green;
+}
+
+#btn{
+    
+    padding: 10px;
+    border-radius: 30px;
+    background-color: #2563C6;
+    color:whitesmoke;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
