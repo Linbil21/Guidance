@@ -79,26 +79,28 @@
       </div>
     </div>
 
-    <div id="formContainer" class="form-container hidden">
-      <form id="newAppointmentForm" class="appointment-form">
-        <input type="text" id="studentName" placeholder="Student Name" autocomplete="off" required>
-        <select title="appointment" id="department" required>
-          <option value="" disabled selected>Select Department</option>
-          <option value="I.T">I.T</option>
-          <option value="BSBA">BSBA</option>
-          <option value="BSED">BSED</option>
-          <option value="BSTM">BSTM</option>
-          <option value="BSEP">BSEP</option>
-          <option value="BSHM">BSHM</option>
-          <option value="BSPSYCH">BSPSYCH</option>
-          <option value="BSCRIM">BSCRIM</option>
-        </select>
-        <input title="appointment" type="date" id="appointmentDate" required>
-        <textarea id="reason" placeholder="Reason for Appointment" required></textarea>
-        <button type="submit">Submit</button>
-        <button type="button" id="cancelBtn">Cancel</button>
-      </form>
-    </div>
+  </div>
+
+  <div id="formContainer" class="form-container hidden">
+    <form id="newAppointmentForm" class="appointment-form">
+      <h2 class="title2" style="text-align: center; margin-bottom: 20px;">New Appointment</h2>
+      <input type="text" id="studentName" placeholder="Student Name" autocomplete="off" required>
+      <select title="appointment" id="department" required>
+        <option value="" disabled selected>Select Department</option>
+        <option value="I.T">I.T</option>
+        <option value="BSBA">BSBA</option>
+        <option value="BSED">BSED</option>
+        <option value="BSTM">BSTM</option>
+        <option value="BSEP">BSEP</option>
+        <option value="BSHM">BSHM</option>
+        <option value="BSPSYCH">BSPSYCH</option>
+        <option value="BSCRIM">BSCRIM</option>
+      </select>
+      <input title="appointment" type="date" id="appointmentDate" required>
+      <textarea id="reason" placeholder="Reason for Appointment" required></textarea>
+      <button type="submit">Submit</button>
+      <button type="button" id="cancelBtn">Cancel</button>
+    </form>
   </div>
 </body>
 
